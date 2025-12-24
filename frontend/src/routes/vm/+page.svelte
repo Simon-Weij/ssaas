@@ -1,9 +1,22 @@
 <script lang="ts">
-	import HomeIcon from './../../components/icons/homeIcon.svelte';
 	import Card from '../../components/card.svelte';
 	import PlusIcon from '../../components/icons/plusIcon.svelte';
+	import Modal from '../../components/modal.svelte';
+
+	interface VM {
+		vmName: string;
+		cpuThreads: number;
+		ram: number;
+		diskSize: number;
+		os: string;
+	}
 
 	let vms: any[] = [];
+	let showModal = false;
+
+	function createVM(settings: VM) {
+		console.log('Creating VM with settings:', settings);
+	}
 </script>
 
 <main>
@@ -19,9 +32,11 @@
 		</div>
 	{/if}
 	<div class="dock">
-		<button>
+		<button on:click={() => (showModal = true)}>
 			<PlusIcon />
 			<span class="dock-label">Add</span>
 		</button>
 	</div>
 </main>
+
+<Modal bind:open={showModal} onCreate={createVM} />
