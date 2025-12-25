@@ -1,3 +1,11 @@
+<!--
+ Copyright (c) 2025 Simon-Weij
+ 
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
 <div class="navbar bg-base-100 shadow-sm">
 	<div class="flex-1">
 		<a class="btn text-xl btn-ghost">daisyUI</a>
